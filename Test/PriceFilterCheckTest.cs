@@ -11,11 +11,10 @@ namespace BaigiamasisDarbas.Test
         [Test]
         public static void PriceFilterCheck()
         {
-            PriceFilterCheckPage page = new PriceFilterCheckPage(chromeDriver);
-            page.NavigateToPage();
-            //page.CloseCookies();
-            page.MaxPrice("15");
-            page.VerifyFilterLabel();
+            priceFilterCheckPage.NavigateToPage();
+            priceFilterCheckPage.CloseCookies();
+            priceFilterCheckPage.MaxPrice("15");
+            priceFilterCheckPage.VerifyFilterLabel();
         }
     }
 }

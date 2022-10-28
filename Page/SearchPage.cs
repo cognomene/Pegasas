@@ -36,7 +36,6 @@ namespace BaigiamasisDarbas.Page
         {
             WebDriverWait wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(10));
             wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.Id("CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelection")));
-            //Assert.AreEqual("Patvirtinti pažymėtus", acceptMarkedCookies.Text, message: "Wrong button");
             acceptMarkedCookies.Click();
         }
 
@@ -62,7 +61,7 @@ namespace BaigiamasisDarbas.Page
         public void ClickOnBook()
         {
             WebDriverWait wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(15));
-            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.LinkText("1984-ieji (4-oji laida)")));
+            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.CssSelector("#lupa-search-result-product-card > div.lupa-search-result-product-contents > div > div.lupa-search-results-product-title.lupa-search-results-product-element > a")));
             bookName.Click();
         }
 

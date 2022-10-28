@@ -14,7 +14,7 @@ namespace BaigiamasisDarbas.Test
         public static void SearchCheck()
         {
             searchPage.NavigateToPage();
-            //searchPage.CloseCookies();
+            searchPage.CloseCookies();
             searchPage.SearchBook();
             searchPage.VerifyBookIsFound();
             searchPage.ClickOnBook();

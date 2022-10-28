@@ -11,31 +11,29 @@ namespace BaigiamasisDarbas.Test
         [Test]
         public static void Click_First_Level_Menu_Links()
         {
-            FirstLevelMenuPage page = new FirstLevelMenuPage(chromeDriver);
-            page.NavigateToPage();
-            page.CloseCookies();
+            firstLevelMenuPage.NavigateToPage();
+            firstLevelMenuPage.CloseCookies();
 
-            page.Click_NaujosKnygos();
-            page.Verify_NaujosKnygos_Link("https://www.pegasas.lt/knygos/naujos-knygos/");
+            firstLevelMenuPage.Click_NaujosKnygos();
+            firstLevelMenuPage.Verify_NaujosKnygos_Link("https://www.pegasas.lt/knygos/naujos-knygos/");
 
-            page.Click_NetrukusPasirodys();
-            page.Verify_NetrukusPasirodys_Link("https://www.pegasas.lt/knygos/naujos-knygos/netrukus-pasirodys/");
+            firstLevelMenuPage.Click_NetrukusPasirodys();
+            firstLevelMenuPage.Verify_NetrukusPasirodys_Link("https://www.pegasas.lt/knygos/naujos-knygos/netrukus-pasirodys/");
 
-            page.Click_TopKnygos();
-            page.Verify_TopKnygos_Link("https://www.pegasas.lt/c/perkamiausios-knygos");
+            firstLevelMenuPage.Click_TopKnygos();
+            firstLevelMenuPage.Verify_TopKnygos_Link("https://www.pegasas.lt/c/perkamiausios-knygos");
 
-            page.Click_PegasoKolekcija();
-            page.Verify_PegasoKolekcija_Link("https://www.pegasas.lt/pegaso-kolekcijos-knygos/");
+            firstLevelMenuPage.Click_PegasoKolekcija();
+            firstLevelMenuPage.Verify_PegasoKolekcija_Link("https://www.pegasas.lt/pegaso-kolekcijos-knygos/");
 
-            page.Click_KakeMake();
-            page.Verify_KakeMake_Link("https://www.pegasas.lt/c/kakes-makes-pasaulis/");
+            firstLevelMenuPage.Click_KakeMake();
+            firstLevelMenuPage.Verify_KakeMake_Link("https://www.pegasas.lt/c/kakes-makes-pasaulis/");
 
-            page.Click_DovanuKuponai();
-            page.Verify_DovanuKuponai_Link("https://www.pegasas.lt/el-dovanu-kuponas-21000895/");
+            firstLevelMenuPage.Click_DovanuKuponai();
+            firstLevelMenuPage.Verify_DovanuKuponai_Link("https://www.pegasas.lt/el-dovanu-kuponas-21000895/");
 
-            page.Click_Superkainos();
-            page.Verify_Superkainos_Link("https://www.pegasas.lt/akcijos/rudens-super-kainos/");
+            firstLevelMenuPage.Click_Superkainos();
+            firstLevelMenuPage.Verify_Superkainos_Link("https://www.pegasas.lt/akcijos/rudens-super-kainos/");
         }
-
     }
 }
