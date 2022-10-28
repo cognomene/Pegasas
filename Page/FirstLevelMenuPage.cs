@@ -56,6 +56,8 @@ namespace BaigiamasisDarbas.Page
 
         public void Click_PegasoKolekcija()
         {
+            WebDriverWait wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(10));
+            wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementIsVisible(By.CssSelector("#root > main > nav > div > ol > li.breadcrumb-item.active")));
             pegasoKolekcija.Click();
         }
 

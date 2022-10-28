@@ -22,7 +22,7 @@ namespace BaigiamasisDarbas.Test
             page.Verify_NetrukusPasirodys_Link("https://www.pegasas.lt/knygos/naujos-knygos/netrukus-pasirodys/");
 
             page.Click_TopKnygos();
-            page.Verify_TopKnygos_Link("https://www.pegasas.lt/c/perkamiausios-knygos/");
+            page.Verify_TopKnygos_Link("https://www.pegasas.lt/c/perkamiausios-knygos");
 
             page.Click_PegasoKolekcija();
             page.Verify_PegasoKolekcija_Link("https://www.pegasas.lt/pegaso-kolekcijos-knygos/");

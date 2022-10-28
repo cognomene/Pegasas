@@ -36,7 +36,7 @@ namespace BaigiamasisDarbas.Page
         {
             WebDriverWait wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(10));
             wait.Until(SeleniumExtras.WaitHelpers.ExpectedConditions.ElementToBeClickable(By.Id("CybotCookiebotDialogBodyLevelButtonLevelOptinAllowallSelection")));
-            Assert.AreEqual("Patvirtinti pažymėtus", acceptMarkedCookies.Text, message: "Wrong button");
+            //Assert.AreEqual("Patvirtinti pažymėtus", acceptMarkedCookies.Text, message: "Wrong button");
             acceptMarkedCookies.Click();
         }
 
@@ -54,12 +54,10 @@ namespace BaigiamasisDarbas.Page
             action.Build().Perform();
         }
 
-
         public void VerifyBookIsFound()
         {
             Assert.AreEqual("1984-ieji (4-oji laida)", bookName.Text, message: "Wrong book");
         }
-
 
         public void ClickOnBook()
         {

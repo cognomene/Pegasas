@@ -8,44 +8,17 @@ using NUnit.Framework.Interfaces;
 
 namespace BaigiamasisDarbas.Test
 {
-    public class SearchTest
+    public class SearchTest : BaseTest
     {
-        private static IWebDriver chromeDriver;
-
-        [OneTimeSetUp]
-        public static void OneTimeSetup()
-        {
-            chromeDriver = new ChromeDriver();
-            chromeDriver.Manage().Window.Maximize();
-            chromeDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
-        }
-
-        [TearDown]
-        public static void Teardown()
-        {
-            if (TestContext.CurrentContext.Result.Outcome != ResultState.Success)
-            {
-                MyScreenshot.TakeScreenshot(chromeDriver);
-            }
-        }
-
-        [OneTimeTearDown]
-        public static void OneTimeTearDown()
-        {
-            chromeDriver.Quit();
-        }
-
         [Test]
         public static void SearchCheck()
         {
-            SearchPage page = new SearchPage(chromeDriver);
-            page.NavigateToPage();
-            page.CloseCookies();
-            page.SearchBook();
-            page.VerifyBookIsFound();
-            page.ClickOnBook();
-            page.VerifyBookPageOpens("https://www.pegasas.lt/1984-ieji-4-oji-laida-2186234/");
-
+            searchPage.NavigateToPage();
+            //searchPage.CloseCookies();
+            searchPage.SearchBook();
+            searchPage.VerifyBookIsFound();
+            searchPage.ClickOnBook();
+            searchPage.VerifyBookPageOpens("https://www.pegasas.lt/1984-ieji-4-oji-laida-2186234/");
         }
     }
 }

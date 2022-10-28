@@ -25,6 +25,8 @@ namespace BaigiamasisDarbas.Test
             bookStoreFinderPage = new BookstoreFinderPage(chromeDriver);
             priceFilterCheckPage = new PriceFilterCheckPage(chromeDriver);
             searchPage = new SearchPage(chromeDriver);
+            chromeDriver.Manage().Window.Maximize();
+            chromeDriver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
         }
 
         [TearDown]

@@ -13,8 +13,8 @@ namespace BaigiamasisDarbas.Test
         {
             PriceFilterCheckPage page = new PriceFilterCheckPage(chromeDriver);
             page.NavigateToPage();
-            page.CloseCookies();
-            page.MaxPrice("15");
+            //page.CloseCookies();
+            page.MaxPrice("16");
             page.VerifyFilterLabel();
         }
     }

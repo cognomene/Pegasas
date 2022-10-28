@@ -62,6 +62,5 @@ namespace BaigiamasisDarbas.Page
         {
             Assert.IsTrue(contacts.Displayed);
         }
-
     }
 }
