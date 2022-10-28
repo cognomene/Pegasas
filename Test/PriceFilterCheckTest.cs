@@ -14,7 +14,7 @@ namespace BaigiamasisDarbas.Test
             PriceFilterCheckPage page = new PriceFilterCheckPage(chromeDriver);
             page.NavigateToPage();
             //page.CloseCookies();
-            page.MaxPrice("16");
+            page.MaxPrice("15");
             page.VerifyFilterLabel();
         }
     }
